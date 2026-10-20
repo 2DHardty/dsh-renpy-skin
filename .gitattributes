@@ -1,0 +1,8 @@
+# The working tree is LF everywhere except one fixture, and core.autocrlf=true
+# on this machine. Without an explicit policy git would rewrite every file to
+# CRLF on checkout, so the first diff after a clone would touch the whole repo.
+* text=auto eol=lf
+
+# Windows-only helpers keep their extension so tooling still recognizes them.
+*.py text eol=lf
+*.mjs text eol=lf

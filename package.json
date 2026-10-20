@@ -1,0 +1,32 @@
+{
+  "name": "dsh-renpy-skin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Ren'Py skin + sprite stage for the DSH web GUI: reads a Ren'Py game directory, reskins the interface from its gui.rpy/choice/background assets, and injects a stage-director prompt plus a renpy_stage Tool so the model drives sprites with native Ren'Py show/hide/scene/with syntax.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.2.0-rc.2",
+    "react": "^18.2.0"
+  },
+  "files": [
+    "lib/**/*.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "license": "MIT"
+}

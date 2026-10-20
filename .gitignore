@@ -1,0 +1,24 @@
+# Scratch space for throwaway probes. `.tmp/en/` holds the pre-translation
+# English docs - the only rollback copy, since this repo had no commits when
+# the docs were translated. Keep the directory out of history but never delete
+# it silently.
+.tmp/
+
+# Node
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+
+# Local settings written by a probe run live outside the repo
+# (%USERPROFILE%\.dsh-renpy-skin), so nothing for them here.
+
+# Editors / OS
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+
+# Local test notes for one machine's game library (absolute paths, session
+# names). Kept on disk, never published.
+docs/questions/
+
